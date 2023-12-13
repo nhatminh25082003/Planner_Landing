@@ -1,0 +1,683 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montaga&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cl--1--: #fcf9f7;
+  --cl--2--: #2b1105;
+  --cl--3--: #c6754d;
+}
+body {
+  margin: 0;
+  background-color: var(--cl--1--);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  font-family: Montaga, sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+}
+
+.flex {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.flex > * {
+  flex: 1 1 25rem;
+}
+
+.column {
+  display: grid;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+// header
+header {
+  position: relative;
+  top: 0;
+  background-color: var(--cl--1--);
+  z-index: 1000;
+
+  .header {
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    // position: relative;
+
+    nav {
+      flex-grow: 1;
+    //   position: relative;
+
+      ul {
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          font-size: 20px;
+          color: pink;
+        //   display: none;
+
+          &:hover {
+            color: var(--cl--3--);
+          }
+        }
+
+        .desktop {
+          width: 70px;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// hero
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    // height: 1400px;
+  }
+
+  .hero-content {
+    align-items: center;
+    min-height: calc(100vh - 141.6px);
+    position: absolute;
+    top: 1500px;
+    left: 200px;
+
+    h2 {
+      color: var(--cl--3--);
+    }
+
+    h1 {
+      padding: 0.5rem 0;
+      text-transform: inherit;
+
+      span {
+        color: #c6754d;
+      }
+    }
+  }
+}
+
+// story
+.story {
+  background-image: url(/assets/images/sky.jpg);
+  // background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 4em;
+
+  h1 {
+    color: var(--cl--1--);
+  }
+
+  .story-content {
+    position: relative;
+
+    .flex + .flex {
+      padding-top: 4em;
+    }
+
+    h5,
+    p {
+      color: var(--cl--1--);
+      font-size: 1rem;
+    }
+
+    h2 {
+      color: var(--cl--1--);
+      padding: 0.2em 0;
+      font-size: 2rem;
+    }
+  }
+
+  .flex:nth-of-type(1) img {
+    object-fit: cover;
+    border-radius: 50% 0 0 0;
+  }
+
+  .flex:nth-of-type(2) img {
+    object-fit: cover;
+    border-radius: 0 0 0 50%;
+  }
+}
+
+// venue
+.venue {
+  background-image: url(/assets/images/damcuoi.jpeg);
+  background-repeat: repeat;
+  background-position: left center;
+  background-size: contain;
+  margin: 4em 0;
+
+  .venue-content {
+    background-color: rgba(252, 249, 247, 0);
+    h5 {
+      color: var(--cl--3--);
+      font-size: 16px;
+    }
+
+    h2 {
+      padding: 0.2em 0;
+    }
+
+    div {
+      padding-top: 0.3em;
+
+      p {
+        padding-top: 0.3em;
+      }
+    }
+  }
+
+  .mySwiper {
+    position: relative;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      min-height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+// accomodation
+.accomodation,
+.itinerary,
+.registry {
+  padding: 4em 0;
+}
+
+.accomodation h2,
+.itinerary h2,
+.rsvp h2 {
+  text-align: center;
+  font-family: Montaga, sans-serif;
+}
+
+.accomodation {
+  .a-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding-top: 2em;
+
+    .a-card {
+      padding: 1em;
+
+      h3 {
+        font-family: Montaga, sans-serif;
+        font-size: 2rem;
+        color: pink;
+        font-weight: 200;
+      }
+
+      p {
+        padding: 0.5em 0;
+      }
+
+      // a{
+      //     margin: 1rem 0;
+      //     padding: 0.5rem ;
+      //     border: 1px solid #c6754d;
+      //     color: pink;
+
+      //     &:hover{
+      //         background-color: #c6754d;
+      //         color: #fcf9f7;
+      //     }
+      // }
+    }
+  }
+}
+
+// page btn
+.page-btn {
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: capitalize;
+  border: 0;
+  color: pink;
+  outline: 1px solid #c6754d;
+  background: transparent;
+  padding: 0.25em 1.5em;
+  margin-top: 1.5em;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--cl--3--);
+    color: var(--cl--1--);
+  }
+}
+
+// bridal
+.bridal {
+  background: linear-gradient(
+      90deg,
+      rgba(252, 249, 247, 0) 0%,
+      rgba(252, 249, 247, 1) 100%
+    ),
+    url(/assets/images/dua1.jpg);
+  // background-repeat: no-repeat;
+  background-position: right center;
+  // background-size: contain;
+  padding: 4em 0;
+
+  h2 {
+    color: pink;
+    font-size: 2rem;
+  }
+
+  .filters {
+    align-items: center;
+    padding-top: 2em;
+
+    .filter-btns {
+      gap: 0.5em;
+      flex-direction: column;
+      max-width: 120px;
+
+      .filter-btn {
+        position: relative;
+        font-size: 20px;
+        white-space: nowrap;
+        // background-color: rgba(252, 249, 247, 0.8);
+        padding: 0.3em;
+        max-width: max-content;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background-color: pink;
+          transition: 0, 3s ease-in-out;
+        }
+      }
+
+      .filter-btn.active::after {
+        width: 100%;
+      }
+    }
+
+    .filter-cards {
+      position: absolute;
+      width: 0;
+      opacity: 0;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2em;
+      transform: scale(0);
+      transition: opacity 0.3s ease-in-out;
+
+      div {
+        img {
+          width: 150px;
+          height: 200px;
+        }
+      }
+    }
+
+    .filter-cards.t-active {
+      position: relative;
+      width: 100%;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+// itinerary
+.itinerary {
+  .filter-btn {
+    position: relative;
+    font-size: 20px;
+    white-space: nowrap;
+    // background-color: rgba(252, 249, 247, 0.8);
+    padding: 0.3em;
+    max-width: max-content;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: pink;
+      transition: 0, 3s ease-in-out;
+    }
+  }
+
+  .filter-btn.active::after {
+    width: 100%;
+  }
+
+  .filter-cards {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+    transform: scale(0);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .filter-cards.t-active {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  h2 {
+    color: var(--cl--2--);
+    font-family: Motaga, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .filter-btns {
+    align-items: center;
+    gap: 3em;
+    padding: 1em 0;
+    max-width: max-content;
+    overflow-x: scroll;
+    margin: 0 auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    .filter-btn {
+      font-size: 1.3rem;
+      color: #2b1105;
+      cursor: pointer;
+    }
+  }
+
+  .filter-cards {
+    padding-top: 2em;
+
+    .row {
+      align-items: flex-start;
+      gap: 2rem;
+
+      & > * {
+        flex: 1 1 20em;
+      }
+
+      .time {
+        max-width: 50px;
+
+        h5 {
+          color: var(--cl--3--);
+          font-size: 18px;
+        }
+      }
+
+      h3 {
+        color: #c6754d;
+        font-size: 2rem;
+      }
+
+      p {
+        padding-top: 0.5em;
+      }
+
+      & p + h3 {
+        padding-top: 0.5em;
+      }
+    }
+  }
+}
+
+// registry
+.registry {
+  p {
+    padding-top: 1em;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #2b1105;
+  }
+
+  .registry-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 0.5em;
+
+    div {
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+// rsvp
+.rsvp {
+  background: linear-gradient(
+      -90deg,
+      rgba(252, 249, 247, 0) 0%,
+      rgba(252, 249, 247, 1) 100%
+    ),
+    url(/assets/images/dua1.jpg);
+  // background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100%;
+  // height: 700px;
+  padding: 4em 0;
+
+  p {
+    padding-top: 0.5em;
+    margin: 0 auto;
+  }
+
+  .form {
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 0 auto;
+    padding: 2em 0;
+
+    .form > * {
+      flex: 1 1 10em;
+    }
+
+    .input {
+      flex-direction: column;
+
+      label {
+        display: inline-block;
+        padding-bottom: 0.5em;
+      }
+
+      input {
+        border: 1px solid var(--cl--2--);
+        outline: none;
+        max-width: 100%;
+        padding: 0.5em;
+      }
+
+      .option {
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2em;
+
+        .row {
+          border: 1px solid var(--cl--2--);
+          align-items: center;
+          text-transform: capitalize;
+          font-size: 16px;
+          gap: 0.3em;
+          padding: 0.5em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  button {
+    max-width: max-content;
+    margin: 0 auto;
+  }
+}
+
+// footer
+footer {
+  padding: 2em 0;
+
+  ul {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    li {
+      a {
+        color: pink;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// media
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+
+  .story-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 5px;
+    height: 20%;
+    background-color: var(--cl--1--);
+    border-radius: 100%;
+  }
+
+  .bridal .filter-cards div {
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  .itinerary .container {
+    max-width: 800px;
+  }
+
+  .rsvp p {
+    max-width: 600px;
+  }
+
+  .form {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile{
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .toggleMenu.active{
+    position: fixed;
+    right: 5%;
+  }
+
+
+
+  .navigation{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    min-height: 0;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+  }
+
+  .navigation.active{
+    position: fixed;
+    min-height: 50%;
+    opacity: 1;
+    background-color: var(--cl--1--);
+    z-index: 999;
+    transform: scale(1);
+  }
+
+  nav ul{
+    flex-direction: column;
+    
+  }
+}

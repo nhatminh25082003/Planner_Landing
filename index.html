@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding planner landing Web</title>
+
+    <!-- link swiper demo -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="header row container">
+        <a href="#" class="mobile logo"
+          ><img src="./assets/images/logo.png" alt=""
+        /></a>
+        <div class="toggleMenu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="navigation row" id="navBar">
+          <ul class="row">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our story</a></li>
+            <li><a href="#">Venue</a></li>
+            <li class="desktop">
+              <a href="#"><img src="./assets/images/logo.png" alt="" /> </a>
+            </li>
+            <li><a href="#">Itinerary</a></li>
+            <li><a href="#">Registry</a></li>
+            <li><a href="#">RSVP</a></li>
+          </ul>
+        </nav>
+        <!-- <div class="fas fa-bars" id="menu-btn"></div> -->
+      </div>
+    </header>
+    <!-- End header -->
+
+    <!-- hero section -->
+    <div class="hero">
+      <img src="./assets/images/my9.jpg" alt="" />
+      <div class="hero-content row container">
+        <div>
+          <h2>Please join us to celebrate</h2>
+          <h1>Nhat Minh <span>&</span> Ngoc Anh</h1>
+          <h2>July 22 , 2030 - Ha Noi, Viet Nam</h2>
+        </div>
+      </div>
+    </div>
+    <!-- End -->
+
+    <!-- Story -->
+    <section class="story">
+      <div class="container">
+        <h1>Our Story</h1>
+        <div class="story-content">
+          <div class="row flex">
+            <div>
+              <h5>September 2018</h5>
+              <h2>We meet</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                at molestias repellendus similique, cumque ut, quidem voluptas
+                praesentium iste nesciunt ipsam quasi, dolorem sint vero alias?
+                Adipisci corrupti reprehenderit sapiente?
+              </p>
+            </div>
+            <div class="img row">
+              <img src="./assets/images/my10.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="row flex">
+            <div>
+              <h5>Jun 2030</h5>
+              <h2>It is love</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                at molestias repellendus similique, cumque ut, quidem voluptas
+                praesentium iste nesciunt ipsam quasi, dolorem sint vero alias?
+                Adipisci corrupti reprehenderit sapiente?
+              </p>
+            </div>
+            <div class="img row">
+              <img src="./assets/images/my7.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End story -->
+
+    <!-- The venue -->
+    <section class="venue">
+      <div class="row flex container">
+        <div class="venue-content">
+          <h5>The venue</h5>
+          <h2>Wedding day flowers</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            quis, totam minima, magni sint rerum est aliquid dolore molestiae
+            ratione dolorem facilis itaque? Dolore, atque dicta minus architecto
+            rem ipsam!
+          </p>
+          <div>
+            <p>60B Nguyen Huy Tuong</p>
+            <p>Ha Noi</p>
+          </div>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/flower.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower5.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower6.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/flower7.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End venue -->
+
+    <!-- Accomodation -->
+    <section class="accomodation">
+      <div class="container">
+        <h2>Accomodation</h2>
+        <div class="a-cards column">
+          <div class="a-card">
+            <h3>Hotel 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+              vitae ratione, dicta autem nemo quis veniam excepturi iste a
+              porro? Nobis molestias pariatur assumenda ea repudiandae est iusto
+              possimus ducimus!
+            </p>
+            <a href="#" class="page-btn">Book 1</a>
+          </div>
+
+          <div class="a-card">
+            <h3>Hotel 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+              vitae ratione, dicta autem nemo quis veniam excepturi iste a
+              porro? Nobis molestias pariatur assumenda ea repudiandae est iusto
+              possimus ducimus!
+            </p>
+            <a href="#" class="page-btn">Book 2</a>
+          </div>
+
+          <div class="a-card">
+            <h3>Hotel 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+              vitae ratione, dicta autem nemo quis veniam excepturi iste a
+              porro? Nobis molestias pariatur assumenda ea repudiandae est iusto
+              possimus ducimus!
+            </p>
+            <a href="#" class="page-btn">Book 3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Accomodation -->
+
+    <!-- Bridal -->
+    <section class="bridal">
+      <div class="container">
+        <h2>The bachelor party</h2>
+        <div class="filters row flex">
+          <div class="filter-btns row">
+            <div class="filter-btn active" data-tab="1">Groom</div>
+            <div class="filter-btn" data-tab="2">Bride</div>
+          </div>
+          <div class="filter-cards row tab1 t-active">
+            <div>
+              <img src="./assets/images/my.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my1.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my4.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my5.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="filter-cards row tab2">
+            <div>
+              <img src="./assets/images/my2.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my3.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my6.jpg" alt="" />
+            </div>
+            <div>
+              <img src="./assets/images/my11.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Bridal -->
+
+    <!-- Itinerary -->
+    <section class="itinerary">
+      <div class="container">
+        <h2>Itinerary</h2>
+        <div class="filter-btns row">
+          <div class="filter-btn active" data-tab="1">Friday,July 11</div>
+          <div class="filter-btn" data-tab="2">Saturday,July 12</div>
+          <div class="filter-btn" data-tab="3">Sunday,July 13</div>
+        </div>
+
+        <div class="filter-cards tab1 t-active">
+          <div class="row">
+            <div class="time">
+              <h5>10am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>11am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>12am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-cards tab2">
+          <div class="row">
+            <div class="time">
+              <h5>10am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>11am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>12am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-cards tab3">
+          <div class="row">
+            <div class="time">
+              <h5>10am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>11am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="time">
+              <h5>12am</h5>
+            </div>
+            <div>
+              <h3>Item title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                eligendi sit necessitatibus similique, sint voluptatum! Mollitia
+                cumque beatae atque fugit. Iure ipsa quo nisi temporibus facere
+                cupiditate vero sapiente maiores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Itinerary -->
+
+    <!-- Registry -->
+    <section class="registry row flex container">
+      <div>
+        <h2>Registry</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum tempora
+          odit eaque, quas ipsum ea ullam quidem in vitae amet possimus id
+          maxime. Et incidunt facere omnis illum numquam amet?
+        </p>
+      </div>
+      <div class="registry-cards column">
+        <div><img src="./assets/images/registry.jpg" alt="" /></div>
+        <div><img src="./assets/images/registry1.jpg" alt="" /></div>
+        <div><img src="./assets/images/registry2.jpg" alt="" /></div>
+        <div><img src="./assets/images/registry3.jpg" alt="" /></div>
+      </div>
+    </section>
+    <!-- End Registry -->
+
+    <!-- RVP -->
+    <section class="rsvp">
+      <div class="container">
+        <h2>RSVP</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt aliquid
+          quaerat nostrum fugit inventore asperiores iste rerum sapiente
+          molestiae repellat adipisci dolorum vel ipsam, excepturi cupiditate,
+          harum distinctio quia corrupti?
+        </p>
+        <form action="">
+          <div class="form row">
+            <div class="input row">
+              <label for="">First Name <span>*</span></label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="input row">
+              <label for="">Last Name <span>*</span></label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="input row">
+              <label for="">Email address <span>*</span></label>
+              <input type="email" name="" id="" />
+            </div>
+            <div class="input row">
+              <label for="">Number of Guests <span>*</span></label>
+              <input type="number" name="" id="" />
+            </div>
+            <div class="input row">
+              <label for="">Attendance <span>*</span></label>
+              <div class="option row">
+                <div class="row">
+                  <input type="checkbox" name="" id="" />
+                  Accept width pleasure
+                </div>
+                <div class="row">
+                  <input type="checkbox" name="" id="" />
+                  Regretfully Decline
+                </div>
+                <div class="row">
+                  <input type="checkbox" name="" id="" />
+                  Rehearsal Dinner
+                </div>
+                <div class="row">
+                  <input type="checkbox" name="" id="" />
+                  Ceremony
+                </div>
+                <div class="row">
+                  <input type="checkbox" name="" id="" />
+                  Reception
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="page-btn row" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- End RVP -->
+
+    <!-- footer -->
+    <footer class="container">
+      <ul class="row">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Venue</a></li>
+        <li><a href="#">Itinerary</a></li>
+        <li><a href="#">Registry</a></li>
+        <li><a href="#">RSVP</a></li>
+      </ul>
+    </footer>
+    <!-- End footer -->
+  </body>
+</html>

@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montaga&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --cl--1--: #fcf9f7;
+  --cl--2--: #2b1105;
+  --cl--3--: #c6754d;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cl--1--);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  font-family: Montaga, sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.flex > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+}
+
+.column {
+  display: grid;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  top: 0;
+  background-color: var(--cl--1--);
+  z-index: 1000;
+}
+header .header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+}
+header .header nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header .header nav ul {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .header nav ul a {
+  font-size: 20px;
+  color: pink;
+}
+header .header nav ul a:hover {
+  color: var(--cl--3--);
+}
+header .header nav ul .desktop {
+  width: 70px;
+}
+header .header nav ul .desktop img {
+  border-radius: 50%;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+}
+.hero .hero-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 141.6px);
+  position: absolute;
+  top: 1500px;
+  left: 200px;
+}
+.hero .hero-content h2 {
+  color: var(--cl--3--);
+}
+.hero .hero-content h1 {
+  padding: 0.5rem 0;
+  text-transform: inherit;
+}
+.hero .hero-content h1 span {
+  color: #c6754d;
+}
+
+.story {
+  background-image: url(/assets/images/sky.jpg);
+  background-position: center;
+  background-size: contain;
+  padding: 4em;
+}
+.story h1 {
+  color: var(--cl--1--);
+}
+.story .story-content {
+  position: relative;
+}
+.story .story-content .flex + .flex {
+  padding-top: 4em;
+}
+.story .story-content h5,
+.story .story-content p {
+  color: var(--cl--1--);
+  font-size: 1rem;
+}
+.story .story-content h2 {
+  color: var(--cl--1--);
+  padding: 0.2em 0;
+  font-size: 2rem;
+}
+.story .flex:nth-of-type(1) img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50% 0 0 0;
+}
+.story .flex:nth-of-type(2) img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 0 50%;
+}
+
+.venue {
+  background-image: url(/assets/images/damcuoi.jpeg);
+  background-repeat: repeat;
+  background-position: left center;
+  background-size: contain;
+  margin: 4em 0;
+}
+.venue .venue-content {
+  background-color: rgba(252, 249, 247, 0);
+}
+.venue .venue-content h5 {
+  color: var(--cl--3--);
+  font-size: 16px;
+}
+.venue .venue-content h2 {
+  padding: 0.2em 0;
+}
+.venue .venue-content div {
+  padding-top: 0.3em;
+}
+.venue .venue-content div p {
+  padding-top: 0.3em;
+}
+.venue .mySwiper {
+  position: relative;
+  max-width: 250px;
+}
+.venue .mySwiper img {
+  width: 100%;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.accomodation,
+.itinerary,
+.registry {
+  padding: 4em 0;
+}
+
+.accomodation h2,
+.itinerary h2,
+.rsvp h2 {
+  text-align: center;
+  font-family: Montaga, sans-serif;
+}
+
+.accomodation .a-cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding-top: 2em;
+}
+.accomodation .a-cards .a-card {
+  padding: 1em;
+}
+.accomodation .a-cards .a-card h3 {
+  font-family: Montaga, sans-serif;
+  font-size: 2rem;
+  color: pink;
+  font-weight: 200;
+}
+.accomodation .a-cards .a-card p {
+  padding: 0.5em 0;
+}
+
+.page-btn {
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: capitalize;
+  border: 0;
+  color: pink;
+  outline: 1px solid #c6754d;
+  background: transparent;
+  padding: 0.25em 1.5em;
+  margin-top: 1.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.page-btn:hover {
+  background-color: var(--cl--3--);
+  color: var(--cl--1--);
+}
+
+.bridal {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(252, 249, 247, 0)), to(rgb(252, 249, 247))), url(/assets/images/dua1.jpg);
+  background: linear-gradient(90deg, rgba(252, 249, 247, 0) 0%, rgb(252, 249, 247) 100%), url(/assets/images/dua1.jpg);
+  background-position: right center;
+  padding: 4em 0;
+}
+.bridal h2 {
+  color: pink;
+  font-size: 2rem;
+}
+.bridal .filters {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+}
+.bridal .filters .filter-btns {
+  gap: 0.5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 120px;
+}
+.bridal .filters .filter-btns .filter-btn {
+  position: relative;
+  font-size: 20px;
+  white-space: nowrap;
+  padding: 0.3em;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  cursor: pointer;
+}
+.bridal .filters .filter-btns .filter-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: pink;
+  -webkit-transition: 0, 3s ease-in-out;
+  transition: 0, 3s ease-in-out;
+}
+.bridal .filters .filter-btns .filter-btn.active::after {
+  width: 100%;
+}
+.bridal .filters .filter-cards {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.bridal .filters .filter-cards div img {
+  width: 150px;
+  height: 200px;
+}
+.bridal .filters .filter-cards.t-active {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.itinerary .filter-btn {
+  position: relative;
+  font-size: 20px;
+  white-space: nowrap;
+  padding: 0.3em;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.itinerary .filter-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: pink;
+  -webkit-transition: 0, 3s ease-in-out;
+  transition: 0, 3s ease-in-out;
+}
+.itinerary .filter-btn.active::after {
+  width: 100%;
+}
+.itinerary .filter-cards {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.itinerary .filter-cards.t-active {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.itinerary h2 {
+  color: var(--cl--2--);
+  font-family: Motaga, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.itinerary .filter-btns {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+  padding: 1em 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  overflow-x: scroll;
+  margin: 0 auto;
+}
+.itinerary .filter-btns::-webkit-scrollbar {
+  width: 0;
+}
+.itinerary .filter-btns .filter-btn {
+  font-size: 1.3rem;
+  color: #2b1105;
+  cursor: pointer;
+}
+.itinerary .filter-cards {
+  padding-top: 2em;
+}
+.itinerary .filter-cards .row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+}
+.itinerary .filter-cards .row > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20em;
+          flex: 1 1 20em;
+}
+.itinerary .filter-cards .row .time {
+  max-width: 50px;
+}
+.itinerary .filter-cards .row .time h5 {
+  color: var(--cl--3--);
+  font-size: 18px;
+}
+.itinerary .filter-cards .row h3 {
+  color: #c6754d;
+  font-size: 2rem;
+}
+.itinerary .filter-cards .row p {
+  padding-top: 0.5em;
+}
+.itinerary .filter-cards .row p + h3 {
+  padding-top: 0.5em;
+}
+
+.registry p {
+  padding-top: 1em;
+}
+.registry h2 {
+  font-size: 2rem;
+  color: #2b1105;
+}
+.registry .registry-cards {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 0.5em;
+}
+.registry .registry-cards div img {
+  width: 100px;
+}
+
+.rsvp {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(252, 249, 247, 0)), to(rgb(252, 249, 247))), url(/assets/images/dua1.jpg);
+  background: linear-gradient(-90deg, rgba(252, 249, 247, 0) 0%, rgb(252, 249, 247) 100%), url(/assets/images/dua1.jpg);
+  background-position: right center;
+  background-size: 100%;
+  padding: 4em 0;
+}
+.rsvp p {
+  padding-top: 0.5em;
+  margin: 0 auto;
+}
+.rsvp .form {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+.rsvp .form .form > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10em;
+          flex: 1 1 10em;
+}
+.rsvp .form .input {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.rsvp .form .input label {
+  display: inline-block;
+  padding-bottom: 0.5em;
+}
+.rsvp .form .input input {
+  border: 1px solid var(--cl--2--);
+  outline: none;
+  max-width: 100%;
+  padding: 0.5em;
+}
+.rsvp .form .input .option {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+}
+.rsvp .form .input .option .row {
+  border: 1px solid var(--cl--2--);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  gap: 0.3em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.rsvp button {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 2em 0;
+}
+footer ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2em;
+}
+footer ul li a {
+  color: pink;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
+  .story-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 5px;
+    height: 20%;
+    background-color: var(--cl--1--);
+    border-radius: 100%;
+  }
+  .bridal .filter-cards div {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .itinerary .container {
+    max-width: 800px;
+  }
+  .rsvp p {
+    max-width: 600px;
+  }
+  .form {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100px;
+    border-radius: 50%;
+  }
+  .toggleMenu.active {
+    position: fixed;
+    right: 5%;
+  }
+  .navigation {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    min-height: 0;
+    opacity: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .navigation.active {
+    position: fixed;
+    min-height: 50%;
+    opacity: 1;
+    background-color: var(--cl--1--);
+    z-index: 999;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
